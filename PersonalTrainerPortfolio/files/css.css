@@ -1,0 +1,583 @@
+@font-face {
+	font-family: "Futura";
+	src: url("fonts/Futura.ttf");
+}
+@font-face {
+	font-family: "AmalfiCoast";
+	src: url("fonts/AmalfiCoast.ttf");
+}		
+		*{
+  			font-family: "Futura", sans-serif;
+  			padding: 0; 
+  			margin: 0;
+  			/*margin: 5px;*/
+  		}
+  		html, body {
+		    height: 100%;
+		    width: 100%;
+		    margin: 0;
+		}
+		p{
+			padding-left: 20px;
+		}
+		.container{
+			/*border: 5px solid red;*/
+			display: grid;
+    		flex-direction: row;
+			/*justify-content:center;*/
+			grid-template-rows: 1fr 1fr 1fr 1fr 0fr 0fr;
+			grid-gap:12px;
+
+		}
+		.bigBox{
+			/*border: 5px solid blue;*/
+			display: flex;
+			flex-direction: column;
+			/*justify-content:center;*/
+			width: 100%;
+			height: 700px;
+			/*grid-template-columns: 20% 80%;*/
+		}
+		.smallBox{
+			/*border: 5px solid pink;*/
+			flex-direction: row;
+			display: flex;
+			/*justify-content:center;*/
+			width: 100%;
+			height: 100%;
+		}
+		#column{
+			flex-direction: row;
+			/*width: 50%;*/
+
+		}
+		#menuBar{
+			/*border: 5px solid yellow;*/
+			flex-direction: row;
+			height: 10%;
+		}
+		#menu{
+			transform: translateY(30%);
+
+		}
+		.menuItem{
+			margin-right: 4%;
+		}
+		#title{
+			height: 20%;
+			font-size: 50pt;
+			padding-left: 10%;
+			width: 70%;
+		}
+		.workoutHeader{
+			margin-top: 5%;
+			margin-left: 5%;
+			font-size: 20pt;
+		}
+		.packageHeader{
+			margin-right: 5%;
+			margin-left: 5%;
+			margin-top: 5%;
+			margin-bottom: 2%;
+			font-size: 25pt;
+		}
+		.packageText{
+			margin-right: 5%;
+		}
+		.articleHeader{
+			margin-left: 5%;
+			margin-top: 2%;
+			font-size: 25pt;
+		}
+		.articleTitle{
+			font-size: 15pt;
+			margin-left: 5%;
+		}
+		input[type=submit] {
+		  background-color: #ccc;
+		  color: white;
+		  border: 3px solid ;
+		  padding: 12px 20px;
+		  display: block;
+    	  margin: 0 auto;
+		}
+		input[type=submit]:hover {
+			transition: 0.4s;
+		   	background-color: pink;
+		}
+		input[type=text], textarea {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  /*border: 3px solid #ccc;*/
+		  border: none;
+			border-bottom: 2px solid #ddd;
+		  -webkit-transition: 0.5s;
+		  transition: 0.5s;
+		  outline: none;
+
+		}
+		input[type=text]:focus ,textarea:focus {
+		  /*border: 3px solid #555;*/
+			border: none;
+			border-bottom: 5px solid pink;
+		}
+		#logoName{
+			transform: translateY(30%);
+		}
+		#motoBackground{
+			background-image:url(images/lunge.jpg); 
+			background-size: cover;
+			justify-content: center;
+			background-color: black;
+		}
+		#moto{
+			font-size: 70px; 
+			margin-top: 15%; 
+			color: white; 
+			font-weight: 900;
+		}
+		.center{
+			justify-content: center;
+		}
+		#profilePic{
+			background-image:url(images/smile.jpg); 
+			background-size: cover; 
+			background-repeat: no-repeat;
+		}
+		#name{
+			font-size: 55pt; 
+			margin-left: 15%;
+			margin-top: 10%;
+			margin-bottom: 5%;
+		}
+		#aboutMeParagraph{
+			margin-left: 15%; margin-right: 15%;
+		}
+		.width{
+			width: 100%;
+		}
+		#socialMedia{
+			text-align: center; 
+			margin-top: 5%;
+		}
+		#arrow{
+			height: 5%; 
+			transform: translateY(1000%); 
+			padding-right: 1%;
+			margin-left: 1%;
+		}
+		.workoutBox{
+			flex-direction: column; 
+			width: 32%;
+		}
+		.workoutImg{
+			height: 50%; 
+		}
+		#packageBackground{
+			background: #323232; 
+			padding-top: 20px; 
+			padding-bottom: 20px;
+		}
+		.packageBox{
+			height: 32%; 
+			margin-bottom: 16px; 
+			margin-left: 25%; 
+			width: 50%; 
+			background-color: white;
+		}
+		.packageImg{
+			height: 100%; 
+			width: 200px; 
+			margin-right: 5%;
+		}
+		#bigArticle{
+			width: 50%; 
+			margin-left: 10%;
+		}
+		#bigArticleBox{
+			margin: 20px; 
+			flex-direction: column;
+		}
+		#bigArticleImg{
+			height: 50%;
+		}
+		#bigArticleParagraph{
+			overflow-y: scroll; 
+			height: 20%;
+		}
+		#articles{
+			width: 25%; 
+			flex-direction: column; 
+			margin-left: 5%;
+		}
+		#articleScrollBox{
+			overflow-y: scroll;
+		}
+		#articleBox{
+			margin-bottom: 5%; 
+			height: 15%;
+		}
+		#articleImg{
+			width: 30%;
+		}
+		#formBox{
+			justify-content: center; 
+			margin-top: 5%;
+			height: 90%;
+		}
+		#subjectForm{
+			height:200px; 
+			width: 300px; 
+			resize: none;
+		}
+		#footer{
+			display: none;
+			height: 0px;
+			/*height: 10%; 
+			background-color: #626262; 
+			justify-content: center;*/
+		}
+		#contactUsImg{
+			background-image:url(images/stairs.jpg); 
+			background-size: cover; 
+			background-repeat: no-repeat; 
+			justify-content: center; 
+			flex-direction: column;
+		}
+		#articleDiv{
+			flex-direction: row;
+			/*hidden*/
+			height: 0px;
+			visibility: hidden;
+		}
+		#formDiv{
+			flex-direction: row;
+		}
+		#menuBtn{
+			display: none;
+		}
+		#logo{
+			width: 100px;
+			margin-left: 16px;
+		}
+		.socialMediaIcon{
+			width: 70px;
+			padding: 10px;
+		}
+		#articleBixOne{
+			height: 150%;
+		}
+
+
+/*animations*/
+
+	.fadeAnimation{
+		animation-name: fade;
+    	animation-duration: 2s;
+	}
+	@keyframes fade {
+	  0%   {opacity: 0;}
+	  25%  {opacity: 0.25;}
+	  50%  {opacity: 0.5;}
+	  100% {opacity: 1;}
+	}
+	.fadeAnimationTwo{
+		animation-name: fadeTwo;
+    	animation-duration: 2s;
+	}
+	@keyframes fadeTwo {
+	  0%  {opacity: 0.5;}
+	  100% {opacity: 1;}
+	}
+	.slideLeftRightAnimation{
+		animation-name: slideLeftRight;
+    	animation-duration: 2s;
+	}
+
+	@keyframes slideLeftRight {
+	  0%   {transform: translateX(-1000px);}
+	  100% {transform: translateX(0);}
+	}
+
+	.slideRightLeftAnimation{
+		animation-name: slideRightLeft;
+    	animation-duration: 2s;
+	}
+	.slideRightLeftAnimation3{
+		animation-name: slideRightLeft;
+    	animation-duration: 2.5s;
+	}
+	.slideRightLeftAnimation4{
+		animation-name: slideRightLeft;
+    	animation-duration: 3s;
+	}
+	.slideRightLeftAnimation5{
+		animation-name: slideRightLeft;
+    	animation-duration: 3.5s;
+	}
+	@keyframes slideRightLeft {
+	  0%   {transform: translateX(1000px);}
+	  100% {transform: translateX(0);}
+	}
+
+	.BiggerAnimation{
+		animation-name: bigger;
+    	animation-duration: 2s;
+	}
+	@keyframes bigger {
+	  0%   {font-size: 100pt;}
+	  100% {font-size: 55pt;}
+	}
+
+	.greyScaleAnimation{
+		animation-name: greyScale;
+    	animation-duration: 3s;
+	}
+	@keyframes greyScale {
+	  0%   {filter: grayscale(100%);}
+	  100% {filter: grayscale(0);}
+	}
+	.shakeAnimation{
+		animation-name: shake;
+    	animation-duration: 3s;
+	}
+	@keyframes shake {
+	  0%    {transform: translateX(1000px);}
+	  25%   {transform: translateX(-400px);}
+	  50% 	{transform: translateX(-1px);}
+	  100%  {transform: translateX(0);}
+	}	
+	.widenAnimation{
+		animation-name: widen;
+    	animation-duration: 2s;
+	}
+	@keyframes widen {
+	  0%    {width: 100%;}
+	  25%   {width: 200%;}
+	  /*50% 	{width: 50%;}*/
+	  100%  {width: 100%;}
+	}
+	.sizeUpAnimation{
+		animation-name: sizeUp;
+    	animation-duration: 2s;
+	}
+	@keyframes sizeUp {
+	  0%    {height: 0%;opacity: 0;}
+	  /*25%   {width: 100%; height: 100%;}*/
+	  /*50% 	{width: 25%; height: 25%;}*/
+	  100%  { height: 40%;opacity: 1;}
+	}
+
+@media (min-width:320px) and (max-device-width: 667px) { /* phones */ 
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
+	p{
+		font-size: 24pt;
+	}
+	h1{
+		font-size: 32pt;
+	}
+	.container{
+		/*border: 5px solid red;*/
+		/*no articleDiv*/
+		grid-template-rows: 0.25fr 1fr 1fr 1fr 0fr 0.01fr;
+	}
+	.bigBox{
+		width: 100%;
+		/*border: 5px solid blue;*/
+		display: flex;
+		flex-direction: column;
+		height: 1500px;
+	}
+	.smallBox{
+		width: auto;
+	}
+	#intro{
+		height: 500px;
+	}
+	#profileBox{
+		flex-direction: column;
+	}
+	#profilePic{
+		height: 50%;
+	}
+	#aboutMeParagraph{
+		font-size: 20pt;
+	}
+	#arrow{
+		display: none;
+	}
+	#workoutDiv{
+		flex-direction: row;
+		width: 100%;
+	}
+	#workoutTitle{
+		display: none;
+		height: 0px;
+	}
+	.workoutBox{
+		width: 100%;
+		height: 1500px;
+	}
+	.workoutImg{
+		height:  1000px;
+	}
+	.workoutHeader{
+		font-size: 40pt;
+	}
+	#title{
+		height: 5%;
+	}
+	#workoutBigBox{
+		overflow-x: scroll; 
+		height: 100%;
+	}
+	#workoutParagraph{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	#workoutprice{
+		margin-left: 5%;
+		margin-bottom: 5%;
+	}
+	.packageBox{
+		margin-left: 0;
+		width: 100%;
+	}
+	.packageImg{
+		width: 50%;
+	}
+	#packageBackground{
+		padding-top: 40px;
+	}
+	#bigArticleImg{
+		width: 100%;
+	}
+	#articleDiv{
+		flex-direction: column;
+		/*no articleDiv*/
+		visibility: hidden;
+	}
+	#bigArticle{
+		width: 100%;
+		margin-left: 0;
+	}
+	#bigArticleParagraph{
+		height: 600px;
+	}
+	#articles{
+		flex-direction: column;
+		height: 100%;
+		width: 90%;
+		justify-content: center;
+	}
+	#articleImg{
+		/*width: 500px;
+		height: 500px;*/
+	}
+	#formDiv{
+		flex-direction: column-reverse;
+	}
+	#formBox{
+		margin-top: 10%;
+	}
+	#menuBar{
+		background-color: #9b9b9b;
+		height: 100px;
+		width: 100%;
+	}
+	#menu{
+		display: none; 
+	}
+	#menuBtn{
+		display: block;
+		text-align: right;
+    	margin: 0px 10px 0px auto;
+    	width: 100px;
+	}
+	#logo{
+		width: 100px;
+		margin-left: 16px;
+	}
+	input,textarea,form{
+		font-size: 20pt;
+	}
+	#subjectForm{
+		width: 600px;
+		height: 300px;
+	}
+	/*#articleBox{
+		height: 45%;
+		flex-direction: column;
+	}
+	#articleScrollBox{
+		overflow-x: scroll;
+		flex-direction: row;
+		display: flex;
+	}*/
+	.articleHeader {
+		font-size: 32pt;
+	}
+	.packageHeader{
+		font-size: 32pt;
+	}
+	.articleTitle{
+		font-size: 32pt;
+	}
+	#articleImg {
+    	width: 100%;
+	}
+	#articleBox {
+    	height: 600px;
+    	flex-direction: column;
+	}
+	.socialMediaIcon{
+		width: 150px;
+	}
+	#socialMedia{
+		margin-bottom: 20px;
+	}
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:641px)  { 
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:961px)  and (max-device-width: 768px) { 
+	.bigBox{
+		width: 102%;
+	}
+}
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:769px) and (max-device-width: 1024px) { 
+	.bigBox{
+		width: 102%;
+	}
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
